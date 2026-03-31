@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir --upgrade pip
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN npm install -g supergateway
+RUN npm install -g supergateway@latest
 
 COPY main.py .
 
@@ -21,4 +21,4 @@ ENV PORT=8080
 
 EXPOSE 8080
 
-CMD supergateway --stdio "python main.py" --port $PORT --baseUrl /
+CMD supergateway --stdio "python main.py" --port $PORT --baseUrl / --outputTransport streamableHttp
