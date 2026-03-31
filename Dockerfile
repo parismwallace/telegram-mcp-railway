@@ -21,4 +21,4 @@ ENV PORT=8080
 
 EXPOSE 8080
 
-CMD supergateway --stdio "python main.py" --port $PORT --baseUrl / --outputTransport sse --ssePath /sse --messagePath /message
+CMD supergateway --stdio "python main.py" --port $PORT --baseUrl https://telegram-mcp-railway-production.up.railway.app --outputTransport sse --ssePath /sse --messagePath /message
